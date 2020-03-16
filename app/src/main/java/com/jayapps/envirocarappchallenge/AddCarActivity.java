@@ -44,7 +44,7 @@ public class AddCarActivity extends AppCompatActivity implements ManufacturerBot
         setContentView(R.layout.activity_add_car);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setElevation(24);
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.background666)));
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.backgroundcolor)));
 
         manufacturer_edittext = findViewById(R.id.manufacturer_edit_text);
         model_edittext = findViewById(R.id.model_edit_text);

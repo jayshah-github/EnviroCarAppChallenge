@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.SearchView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,14 +17,14 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import java.util.ArrayList;
 
-public class ManufacturerBottomSheet extends BottomSheetDialogFragment implements Adapterrrrrrrrrr.onItemClickedRecycler {
+public class ManufacturerBottomSheet extends BottomSheetDialogFragment implements AdapterBottomSheet.onItemClickedRecycler {
 
-    Adapterrrrrrrrrr.onItemClickedRecycler onItemClickedRecycler = ManufacturerBottomSheet.this;
+    AdapterBottomSheet.onItemClickedRecycler onItemClickedRecycler = ManufacturerBottomSheet.this;
     private BottomSheetListener mbottomSheetListener;
     private BottomSheetListenerCancel bottomSheetListenerCancel;
     private int id;
     private RecyclerView recyclerView;
-    private Adapterrrrrrrrrr mAdapter;
+    private AdapterBottomSheet mAdapter;
     private ArrayList<Item> itemArrayList;
     private String headingName = "";
     TextView name;
@@ -48,7 +46,7 @@ public class ManufacturerBottomSheet extends BottomSheetDialogFragment implement
 
         name = v.findViewById(R.id.textView);
         name.setText(headingName);
-        mAdapter = new Adapterrrrrrrrrr(itemArrayList, onItemClickedRecycler, id);
+        mAdapter = new AdapterBottomSheet(itemArrayList, onItemClickedRecycler, id);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 4));
         recyclerView.setAdapter(mAdapter);
 

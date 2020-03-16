@@ -1,16 +1,12 @@
 package com.jayapps.envirocarappchallenge;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -21,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerViewCarList;
     FloatingActionButton fabAddCar;
-    AdapterModel mAdapter;
+    AdapterCar mAdapter;
 
     private ArrayList<Item> carArrayList = new ArrayList<>();
     @Override
@@ -30,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getSupportActionBar().setElevation(24);
 
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.background666)));
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.backgroundcolor)));
         recyclerViewCarList=findViewById(R.id.car_list);
         fabAddCar=findViewById(R.id.btn_fab_addcar);
 
@@ -42,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mAdapter = new AdapterModel(carArrayList);
+        mAdapter = new AdapterCar(carArrayList);
         recyclerViewCarList.setLayoutManager(new LinearLayoutManager(this) );
         recyclerViewCarList.setAdapter(mAdapter);
 

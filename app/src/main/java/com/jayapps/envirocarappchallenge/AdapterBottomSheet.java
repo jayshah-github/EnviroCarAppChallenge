@@ -11,11 +11,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class Adapterrrrrrrrrr extends RecyclerView.Adapter<Adapterrrrrrrrrr.ViewHolder>   {
+public class AdapterBottomSheet extends RecyclerView.Adapter<AdapterBottomSheet.ViewHolder>   {
     private ArrayList<Item> mItems;
     private onItemClickedRecycler mlistener;
 private int id;
-    public Adapterrrrrrrrrr(ArrayList<Item> mItems,onItemClickedRecycler mlistener,int id) {
+    public AdapterBottomSheet(ArrayList<Item> mItems, onItemClickedRecycler mlistener, int id) {
         this.mItems = mItems;
         this.mlistener=mlistener;
         this.id=id;
@@ -24,15 +24,15 @@ private int id;
     @NonNull
     @Override
 
-    public Adapterrrrrrrrrr.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public AdapterBottomSheet.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View listItem= layoutInflater.inflate(R.layout.item_manufacturers, parent, false);
-        Adapterrrrrrrrrr.ViewHolder viewHolder = new Adapterrrrrrrrrr.ViewHolder(listItem);
+        AdapterBottomSheet.ViewHolder viewHolder = new AdapterBottomSheet.ViewHolder(listItem);
         return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Adapterrrrrrrrrr.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull AdapterBottomSheet.ViewHolder holder, int position) {
         holder.bindData(mItems.get(position));
     }
 
