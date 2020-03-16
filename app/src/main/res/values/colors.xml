@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#03A9F4</color>
+    <color name="primary_dark">#0288D1</color>
+    <color name="primary_light">#B3E5FC</color>
+    <color name="accent">#03A9F4</color>
+    <color name="colorDisabled">#999999</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="white">#ffffff</color>
+    <color name="tinticon">#000000</color>
+    <color name="textcolor">#000000</color>
+    <color name="background666">#03A9F4</color>
+        <color name="onSurface">#000000</color>
+        <color name="onBackground">#000000</color>
+
+
+
+
+    <!--    <color name="primary">#6200EE</color>-->
+<!--    <color name="primary_variant">#3700B3</color>-->
+<!--    <color name="secondary">#03DAC6</color>-->
+<!--    <color name="secondary_variant">#018786</color>-->
+<!--<color name="background">#FFFFFF</color>-->
+<!--<color name="surface">#FFFFFF</color>-->
+<!--    <color name="onSecondary">#000000</color>-->
+<!--    <color name="onBackground">#000000</color>-->
+<!--    <color name="onSurface">#000000</color>-->
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>
