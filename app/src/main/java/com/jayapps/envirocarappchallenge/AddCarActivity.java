@@ -9,6 +9,7 @@ import android.content.res.Resources;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Html;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -45,7 +46,8 @@ public class AddCarActivity extends AppCompatActivity implements ManufacturerBot
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setElevation(24);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.backgroundcolor)));
-
+        getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>EnviroCarrAppChallenge</font>"));
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_white);
         manufacturer_edittext = findViewById(R.id.manufacturer_edit_text);
         model_edittext = findViewById(R.id.model_edit_text);
         year_edittext = findViewById(R.id.year_edit_text);
@@ -177,26 +179,43 @@ public class AddCarActivity extends AppCompatActivity implements ManufacturerBot
     }
 
     public void listInit() {
-        itemArrayListModel.add(new Item("111"));
-        itemArrayListModel.add(new Item("112"));
-        itemArrayListModel.add(new Item("113"));
-        itemArrayListModel.add(new Item("114"));
-        itemArrayListModel.add(new Item("115"));
-        itemArrayListModel.add(new Item("116"));
+        itemArrayListModel.add(new Item("A1"));
+        itemArrayListModel.add(new Item("A2"));
+        itemArrayListModel.add(new Item("B1"));
+        itemArrayListModel.add(new Item("B2"));
+        itemArrayListModel.add(new Item("C1"));
+        itemArrayListModel.add(new Item("C2"));
+        itemArrayListModel.add(new Item("D1"));
+        itemArrayListModel.add(new Item("D2"));
+        itemArrayListModel.add(new Item("E1"));
+        itemArrayListModel.add(new Item("E2"));
+        itemArrayListModel.add(new Item("F1"));
+        itemArrayListModel.add(new Item("F2"));
 
-        itemArrayList.add(new Item("11"));
-        itemArrayList.add(new Item("12"));
-        itemArrayList.add(new Item("13"));
-        itemArrayList.add(new Item("14"));
-        itemArrayList.add(new Item("15"));
-        itemArrayList.add(new Item("16"));
 
-        itemArrayListFuel.add(new Item("211"));
-        itemArrayListFuel.add(new Item("212"));
-        itemArrayListFuel.add(new Item("213"));
-        itemArrayListFuel.add(new Item("214"));
-        itemArrayListFuel.add(new Item("215"));
-        itemArrayListFuel.add(new Item("216"));
+
+        itemArrayList.add(new Item("Audi"));
+        itemArrayList.add(new Item("Bmw"));
+        itemArrayList.add(new Item("Buick"));
+        itemArrayList.add(new Item("Chevrolet"));
+        itemArrayList.add(new Item("Chrysler"));
+        itemArrayList.add(new Item("Citroen"));
+        itemArrayList.add(new Item("Daimler"));
+        itemArrayList.add(new Item("Fiat"));
+        itemArrayList.add(new Item("Ford"));
+        itemArrayList.add(new Item("Honda"));
+        itemArrayList.add(new Item("Toyota"));
+        itemArrayList.add(new Item("Volkswagen"));
+
+
+
+
+        itemArrayListFuel.add(new Item("Diesel"));
+        itemArrayListFuel.add(new Item("Electric"));
+        itemArrayListFuel.add(new Item("Gas"));
+        itemArrayListFuel.add(new Item("Gasoline"));
+        itemArrayListFuel.add(new Item("Hybrid"));
+        itemArrayListFuel.add(new Item("Petrol"));
 
 
     }
@@ -227,7 +246,7 @@ public class AddCarActivity extends AppCompatActivity implements ManufacturerBot
             fuel_edittext.setError(null);
         }
         if (TextUtils.isEmpty(engine_edittext.getText())) {
-            engine_edittext.setError("Please select a engine");
+            engine_edittext.setError("Please enter engine displacement");
         } else {
             check[4] = true;
             engine_edittext.setError(null);

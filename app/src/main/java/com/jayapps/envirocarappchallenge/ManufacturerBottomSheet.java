@@ -44,10 +44,11 @@ public class ManufacturerBottomSheet extends BottomSheetDialogFragment implement
 
         searchView = v.findViewById(R.id.filteredittext);
 
+
         name = v.findViewById(R.id.textView);
         name.setText(headingName);
         mAdapter = new AdapterBottomSheet(itemArrayList, onItemClickedRecycler, id);
-        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 4));
+        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 3));
         recyclerView.setAdapter(mAdapter);
 
 
@@ -58,7 +59,7 @@ public class ManufacturerBottomSheet extends BottomSheetDialogFragment implement
                 for (Item d : itemArrayList) {
                     //or use .equal(text) with you want equal match
                     //use .toLowerCase() for better matches
-                    if (d.getName().contains(s)) {
+                    if (d.getName().toLowerCase().contains(s.toLowerCase())) {
                         temp.add(d);
                     }
                 }
@@ -74,7 +75,7 @@ public class ManufacturerBottomSheet extends BottomSheetDialogFragment implement
                 for (Item d : itemArrayList) {
                     //or use .equal(text) with you want equal match
                     //use .toLowerCase() for better matches
-                    if (d.getName().contains(s)) {
+                    if (d.getName().toLowerCase().contains(s.toLowerCase())) {
                         temp.add(d);
                     }
                 }

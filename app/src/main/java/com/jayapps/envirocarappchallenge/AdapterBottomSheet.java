@@ -26,7 +26,7 @@ private int id;
 
     public AdapterBottomSheet.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View listItem= layoutInflater.inflate(R.layout.item_manufacturers, parent, false);
+        View listItem= layoutInflater.inflate(R.layout.item_layout, parent, false);
         AdapterBottomSheet.ViewHolder viewHolder = new AdapterBottomSheet.ViewHolder(listItem);
         return viewHolder;
     }

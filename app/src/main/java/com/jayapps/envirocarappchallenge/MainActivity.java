@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -25,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().setElevation(24);
-
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.backgroundcolor)));
+        getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>EnviroCarrAppChallenge</font>"));
         recyclerViewCarList=findViewById(R.id.car_list);
         fabAddCar=findViewById(R.id.btn_fab_addcar);
 
